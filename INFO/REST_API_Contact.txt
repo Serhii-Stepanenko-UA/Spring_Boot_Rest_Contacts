@@ -1,0 +1,75 @@
+
+REST API Contact
+----------------
+
+Postman для тесту REST API
+https://www.postman.com/
+
+Стартуємо додаток в IDE.
+
+(1) REST-запит на отримання даних
+
+GET
+http://localhost:8080/Spring_Boot_Rest_Contacts-0.0.1-SNAPSHOT/api/v1/contacts
+
+
+(2) REST-запит на створення даних
+
+POST
+http://localhost:8080/Spring_Boot_Rest_Contacts-0.0.1-SNAPSHOT/api/v1/contacts
+
+Налаштування в Postman: Body, raw, JSON.
+Прописуємо при кожному запиті окремо.
+УВАГА. Для ключів, НЕ "first_name", а "firstName".
+Інакше, помилка first_name є null, а при створенні
+нашої таблиці колонка first_name NOT NULL.
+
+{
+	"firstName": "Alice",
+	"lastName": "Clark",
+	"phone": "0380678904672"
+}
+
+
+{
+	"firstName": "John",
+	"lastName": "Green",
+	"phone": "0118958734786"
+}
+
+{
+	"firstName": "Robert",
+	"lastName": "Debian",
+	"phone": "0118745638897"
+}
+
+{
+	"firstName": "Lucy",
+	"lastName": "Terra",
+	"phone": "0100287367575"
+}
+
+
+(3) REST-запит на отримання даних за id
+
+GET
+http://localhost:8080/Spring_Boot_Rest_Contacts-0.0.1-SNAPSHOT/api/v1/contacts/2
+
+
+(4) REST-запит на оновлення даних за id
+
+PUT
+http://localhost:8080/Spring_Boot_Rest_Contacts-0.0.1-SNAPSHOT/api/v1/contacts/4
+
+{
+	"firstName": "Lucy",
+	"lastName": "Moonlight",
+	"phone": "0130987658347"
+}
+
+
+(5) REST-запит на видалення даних за id
+
+DELETE
+http://localhost:8080/Spring_Boot_Rest_Contacts-0.0.1-SNAPSHOT/api/v1/contacts/3
+
